@@ -20,11 +20,24 @@
         <font color="black">
         
         
-    <h1> My Book of Recipes </h1>
+    <h1> My Recipe Diary </h1>
 </font>
     <hr>
     <br>
-     Select any food! <input><select></select><input type="submit" value="Select">
+    <form action="#" 
+    th:action="@{/showResults}" 
+    th:object="Recipe" 
+    method="post">
+    </form>
+
+     What are you craving for? <input th:field="*{q}"> 
+     What is your diet plan? <input th:field="*{diet}">
+     what is the time of day? <input th:field="*{mealType}">
+    
+     // make dropdown list
+     <input type="submit" value="Select">
+    </form>
+
 <br>
 <br>
 </center>

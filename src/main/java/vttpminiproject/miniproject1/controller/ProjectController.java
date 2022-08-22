@@ -12,10 +12,10 @@ public class ProjectController {
         return "index";
     }
 
-    @PostMapping("/showDiary")
-    public String getDiary(){
+    @PostMapping("/showResults")
+    public String getResults(){
 
-        return "diary";
+        return "result";
     }
 
 
