@@ -20,7 +20,7 @@ public class RecipeModel {
     private String[] cuisineType;
     private String[] mealType;
     private String[] dishType;
-    private Map<String, Total> totalNutrients;
-    private Map<String, Total> totalDaily;
+   /*  private Map<String, Total> totalNutrients;
+    private Map<String, Total> totalDaily; */
     
 }
