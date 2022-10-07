@@ -22,7 +22,18 @@
     </div>
   </div> 
     <h1>RESULT PAGE</h1>
-
+    <img th:src = "${image}">
+    <p th:text = "${calories}"></p>
+    <p th:text = "${label}"></p>
+    <table>
+      <tr th:each = "eachrecipe:*{allrecipe}">
+        <td>
+          <img th:src = "${eachrecipe.recipe.image}">
+          <p th:text = "${eachrecipe.recipe.calories}"></p>
+          <p th:text = "${eachrecipe.recipe.label}"></p>
+        </td>
+      </tr>
+    </table>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

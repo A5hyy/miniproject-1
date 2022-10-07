@@ -45,7 +45,7 @@
                         method="post"
                         class="example" 
                         style="margin:auto;max-width:500px">
-                        <input class=searchbar type="text" placeholder="Search.." name="search2">
+                        <input class=searchbar type="text" placeholder="Search.." name="search">
                         <button type="submit"><i class="fa fa-search"></i></button>
                   </form>
                     <h1>Example Headline</h1>
@@ -59,6 +59,7 @@
                 <div class="overlay-image" style="background-image:url(./slide-2.jpg);"></div>
                 <div class="container">
                   <center>
+                    <h1>Welcome, <span th:text="${username}"></span></h1>
                     <h1> Get Your Recipe</h1>
                   </center>
                     <form action="#"
@@ -67,7 +68,9 @@
                           method="post"
                           class="example" 
                           style="margin:auto;max-width:500px">
-                          <input class=searchbar type="text" placeholder="Search.." name="search2">
+                          
+                          
+                          <input class=searchbar type="text" placeholder="Search.." name="search">
                           <button type="submit"><i class="fa fa-search"></i></button>
                     </form>
                     <h1>Example Headline</h1>
@@ -89,7 +92,7 @@
                           method="post"
                           class="example" 
                           style="margin:auto;max-width:500px">
-                          <input class=searchbar type="text" placeholder="Search.." name="search2">
+                          <input class=searchbar type="text" placeholder="Search.." name="search">
                           <button type="submit"><i class="fa fa-search"></i></button>
                     </form>
                     <h1>Example Headline</h1>
@@ -123,6 +126,7 @@
 
   </head>
   <body>
+    <h1>Welcome, <span th:text="${username}"></span></h1>
     <!-- <h1>Hello, world!</h1>
     <p>My Recipe App</p>
         <form class="example" action="/results.html" style="margin:auto;max-width:500px">
