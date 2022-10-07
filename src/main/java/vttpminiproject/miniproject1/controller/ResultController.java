@@ -5,15 +5,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
-public class RecipeController {
+public class ResultController {
 
-    @GetMapping("/home")
-    public String getHome(){
-
-        return "home";
-    }
-
-    @PostMapping("/result")
+    @GetMapping("/result")
     public String getResult(){
 
         return "result";

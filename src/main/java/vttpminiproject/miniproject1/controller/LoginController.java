@@ -5,18 +5,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
-public class RecipeController {
-
-    @GetMapping("/home")
-    public String getHome(){
-
-        return "home";
+public class LoginController {
+    @GetMapping("/login")
+    public String getLogin(){
+        return "login";
+        
     }
 
-    @PostMapping("/result")
-    public String getResult(){
-
-        return "result";
-    }
 
 }
