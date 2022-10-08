@@ -54,7 +54,7 @@ public class RecipeController {
 
         for (int i = 0; i < recipemodel.size(); i++) {
             HashMap test1 = (HashMap) recipemodel.get(i).get("recipe");
-            ArrayList test1 = (ArrayList) recipemodel.get(i)
+            HashMap test2 =  recipemodel.get(i);
             System.out.println(test1.get("label"));
         }
         model.addAttribute("label", test.get("label"));
