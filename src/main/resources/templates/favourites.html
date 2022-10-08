@@ -13,18 +13,31 @@
   </head>
   <body>
     <div class="topnav">
-      <a class="active" href="/home">Home</a>
+      <a class="active" th:href="@{'/home?username=' + ${username}}">Home</a>
       <a href="#news">News</a>
       <a href=".favourites">Favourites</a>
       <a href="#about">About</a>
       <div class="topnav-right">
       <form class="d-flex">
-        <a href="/login" class="btn btn-outline-dark" tabindex="-1" role="button" aria-disabled="true">Logout</a>
+        <a href="/" class="btn btn-outline-dark" tabindex="-1" role="button" aria-disabled="true">Logout</a>
         </form>
       </div>
     </div> 
     <h1>FAVOUTITES PAGE</h1>
+    <p>welcome, <span th:text="${username}"></span></p>
 
+    <table>
+      <tr th:each = "eachrecipe:*{recipe}">
+        <td>
+          
+         
+          <img th:src = "${eachrecipe.image}">
+          <p th:text = "${eachrecipe.calories}"></p>
+          <p th:text = "${eachrecipe.label}"></p>
+        </td>
+      </tr>
+      
+    </table>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

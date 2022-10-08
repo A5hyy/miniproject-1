@@ -11,13 +11,18 @@
   </head>
   <body>  
     <div class="topnav">
-    <a class="active" href="/home">Home</a>
+      
+        
+    
+
+    
+    <a class="active" th:href="@{'/home?username=' + ${username}}">Home</a>
     <a href="#news">News</a>
     <a href="/favourites">Favourites</a>
     <a href="#about">About</a>
     <div class="topnav-right">
     <form class="d-flex">
-      <a href="/login" class="btn btn-outline-dark" tabindex="-1" role="button" aria-disabled="true">Logout</a>
+      <a href="/" class="btn btn-outline-dark" tabindex="-1" role="button" aria-disabled="true">Logout</a>
       </form>
     </div>
   </div> 
@@ -25,15 +30,20 @@
     <img th:src = "${image}">
     <p th:text = "${calories}"></p>
     <p th:text = "${label}"></p>
+    <form th:action="@{/favourites}" method="get">
     <table>
       <tr th:each = "eachrecipe:*{allrecipe}">
         <td>
+          
+          <input type="checkbox" name="save" th:value="${eachrecipe.recipe.label}">
           <img th:src = "${eachrecipe.recipe.image}">
           <p th:text = "${eachrecipe.recipe.calories}"></p>
           <p th:text = "${eachrecipe.recipe.label}"></p>
         </td>
       </tr>
+      <button>save</button>
     </table>
+  </form>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

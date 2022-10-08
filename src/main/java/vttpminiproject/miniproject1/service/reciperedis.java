@@ -1,5 +1,6 @@
 package vttpminiproject.miniproject1.service;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
@@ -21,6 +22,15 @@ public class reciperedis implements reciperepo {
     @Qualifier("games")
     RedisTemplate<String, RecipeModel> redisTemplate;
 
+    public void saveRecipe(String username, RecipeModel model){
+        redisTemplate.opsForValue().set(username, model);
+
+    }
+
+    public RecipeModel getRecipe(String username){
+        RecipeModel recipemodel = redisTemplate.opsForValue().get(username);
+        return recipemodel;
+    }
     // @Override
     // public int save(final Mastermind ctc) {
     //     logger.info("Save mastermind > " + logger);

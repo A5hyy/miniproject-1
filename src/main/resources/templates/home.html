@@ -19,7 +19,7 @@
                 <a href="#about">About</a>
                 <div class="topnav-right">
                   <form class="d-flex">
-                    <a href="/login" class="btn btn-outline-dark" tabindex="-1" role="button" aria-disabled="true">Logout</a>
+                    <a href="/" class="btn btn-outline-dark" tabindex="-1" role="button" aria-disabled="true">Logout</a>
                     </form>
                   </div>
               
@@ -46,6 +46,7 @@
                         class="example" 
                         style="margin:auto;max-width:500px">
                         <input class=searchbar type="text" placeholder="Search.." name="search">
+                        <input type="hidden" name="username" th:value="${username}">
                         <button type="submit"><i class="fa fa-search"></i></button>
                   </form>
                     <h1>Example Headline</h1>
