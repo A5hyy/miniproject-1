@@ -86,5 +86,8 @@ public class RecipeModel {
     public void setCalories(double calories) {
         this.calories = calories;
     }
+    public Object toJson() {
+        return null;
+    }
     
 }

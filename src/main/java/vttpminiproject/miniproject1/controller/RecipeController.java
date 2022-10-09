@@ -105,7 +105,7 @@ public class RecipeController {
         // for (int i = 0; i < model1.getRecipelist().size(); i++) {
         //     System.out.println(recipeArray.get(i).getLabel());
         // }
-        // service.saveRecipe(userName, model1);
+         service.saveRecipe(userName, model1);
         RecipeModel recipeModel2 = service.getRecipe(userName);
         //System.out.println(model1.recipelist.get(0).getLabel());
         model.addAttribute("recipe", array);
