@@ -20,3 +20,9 @@
     border-bottom-right-radius: .3rem;
     }
     }
+
+.section {
+    align-items: center;
+    align-self: auto;
+
+}

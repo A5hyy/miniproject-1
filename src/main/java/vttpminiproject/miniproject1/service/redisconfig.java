@@ -19,8 +19,8 @@ import org.springframework.data.redis.serializer.StringRedisSerializer;
 import vttpminiproject.miniproject1.model.RecipeModel;
 
 @Configuration
-public class recipeconfig {
-    private static final Logger logger = LoggerFactory.getLogger(recipeconfig.class);
+public class redisconfig {
+    private static final Logger logger = LoggerFactory.getLogger(redisconfig.class);
 
     @Value("${spring.redis.host}")
     private String redisHost;

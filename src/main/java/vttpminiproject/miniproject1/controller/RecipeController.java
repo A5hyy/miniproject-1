@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.client.RestTemplate;
 
 import vttpminiproject.miniproject1.model.RecipeModel;
-import vttpminiproject.miniproject1.service.reciperedis;
+import vttpminiproject.miniproject1.service.redisservice;
 
 @Controller
 public class RecipeController {
@@ -26,7 +26,7 @@ public class RecipeController {
     public String itemName;
 
     @Autowired
-    reciperedis service;
+    redisservice service;
 
     @GetMapping("/home")
     public String getHome(Model model, @RequestParam("username") String name){

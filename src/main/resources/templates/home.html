@@ -14,9 +14,7 @@
   </head>     
              <div class="topnav">
                 <a class="active" href="/home">Home</a>
-                <a href="#news">News</a>
-                <a href="/favourites">Favourites</a>
-                <a href="#about">About</a>
+               
                 <div class="topnav-right">
                   <form class="d-flex">
                     <a href="/" class="btn btn-outline-dark" tabindex="-1" role="button" aria-disabled="true">Logout</a>
@@ -31,13 +29,16 @@
             <li data-bs-target="#myCarousel" data-bs-slide-to="1"></li>
             <li data-bs-target="#myCarousel" data-bs-slide-to="2"></li>
         </ol>
+        
         <div class="carousel-inner">
             <div class="carousel-item active">
               
                 <div class="overlay-image" style="background-image:url(./slide-1.jpg);"></div>
+                
                 <div class="container">
                   <center>
-                    <h1> Get Your Recipe</h1>
+                    <h1>Welcome back <span th:text="${username}"></span>! </h1>
+                    <h1>What are you craving for?</h1>
                 </center>
                   <form action="#"
                         th:action="@{/result}"
@@ -49,19 +50,17 @@
                         <input type="hidden" name="username" th:value="${username}">
                         <button type="submit"><i class="fa fa-search"></i></button>
                   </form>
-                    <h1>Example Headline</h1>
-                    <p>This is a test. Please remember to edit this text</p>
-                    <a href="#" class="btn btn-lg btn-primary">
-                        Sign up today
-                    </a>
+                    
                 </div>
+              
             </div>
             <div class="carousel-item">
                 <div class="overlay-image" style="background-image:url(./slide-2.jpg);"></div>
                 <div class="container">
                   <center>
-                    <h1>Welcome, <span th:text="${username}"></span></h1>
-                    <h1> Get Your Recipe</h1>
+                    <h1>Welcome back <span th:text="${username}"></span>! </h1>
+                    <h1>What are you craving for?</h1>
+                    
                   </center>
                     <form action="#"
                           th:action="@{/result}"
@@ -74,18 +73,15 @@
                           <input class=searchbar type="text" placeholder="Search.." name="search">
                           <button type="submit"><i class="fa fa-search"></i></button>
                     </form>
-                    <h1>Example Headline</h1>
-                    <p>This is a test. Please remember to edit this text</p>
-                    <a href="#" class="btn btn-lg btn-primary">
-                        Sign up today
-                    </a>
+                    
                 </div>
             </div>
             <div class="carousel-item">
                 <div class="overlay-image" style="background-image:url(./slide-3.jpg);"></div>
                 <div class="container">
                   <center>
-                    <h1> Get Your Recipe</h1>
+                    <h1>Welcome back <span th:text="${username}"></span>! </h1>
+                    <h1>What are you craving for?</h1>
                   </center>
                     <form action="#"
                           th:action="@{/result}"
@@ -96,14 +92,11 @@
                           <input class=searchbar type="text" placeholder="Search.." name="search">
                           <button type="submit"><i class="fa fa-search"></i></button>
                     </form>
-                    <h1>Example Headline</h1>
-                    <p>This is a test. Please remember to edit this text</p>
-                    <a href="#" class="btn btn-lg btn-primary">
-                        Sign up today
-                    </a>
+                    
                 </div>
             </div>
         </div>
+      </center>
         <!-- TODO NOT WORKING -->
 
      <a href="#myCarousel" 
@@ -127,7 +120,6 @@
 
   </head>
   <body>
-    <h1>Welcome, <span th:text="${username}"></span></h1>
     <!-- <h1>Hello, world!</h1>
     <p>My Recipe App</p>
         <form class="example" action="/results.html" style="margin:auto;max-width:500px">

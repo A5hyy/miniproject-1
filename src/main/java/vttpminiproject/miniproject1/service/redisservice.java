@@ -15,7 +15,7 @@ import org.springframework.stereotype.Service;
 import vttpminiproject.miniproject1.model.RecipeModel;
 
 @Service
-public class reciperedis implements reciperepo {
+public class redisservice implements redisrepo {
     private static final Logger logger = LoggerFactory.getLogger(RecipeModel.class);
 
     @Autowired
