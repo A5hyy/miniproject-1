@@ -89,5 +89,8 @@ public class RecipeModel {
     public Object toJson() {
         return null;
     }
+    public static Object create(String result) {
+        return null;
+    }
     
 }

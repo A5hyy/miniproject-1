@@ -16,21 +16,30 @@
      integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
      crossorigin="anonymous"
     />
+    <style>
+      h1 {
+  text-align: center;
+  color: white;
+}
+
+    </style>
   
   </head>
+  
   <div class="topnav">
-    <a class="active" th:href="@{'/home?username=' + ${username}}">Home</a>
-    
+    <a class="active" href="/home">Home</a>
+   
     <div class="topnav-right">
-    <form class="d-flex">
-      <a href="/" class="btn btn-outline-dark" tabindex="-1" role="button" aria-disabled="true">Logout</a>
-      </form>
-    </div>
+      <form class="d-flex">
+        <a href="/" class="btn btn-outline-dark" tabindex="-1" role="button" aria-disabled="true">Logout</a>
+        </form>
+      </div>
+  
   </div> 
   <body>
-   
-    <h1>FAVOUTITES PAGE</h1>
-    <p>welcome, <span th:text="${username}"></span></p>
+   <h1><span>Yummyyyyyyyy</span></h1>
+    <h1><span>You've got great taste <span th:text="${username}"></span>!</span></h1>
+    
 
     <table>
       <tr th:each = "eachrecipe:*{recipe}">

@@ -3,6 +3,7 @@ package vttpminiproject.miniproject1.service;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Optional;
 import java.util.Set;
 
 import org.slf4j.Logger;
@@ -40,4 +41,16 @@ public class redisservice implements redisrepo {
     //         return 1;
     //     return 0;
     // }
+
+    public Optional<Object> saveSearchById(String id) {
+        Object result = redisrepo.get(id);
+        if(result == null)
+        return Optional.empty();
+
+        return Optional.of(RecipeModel.create((String)result));
+    }
+
+    public ArrayList<String> getKeys() {
+        return null;
+    }
 }
